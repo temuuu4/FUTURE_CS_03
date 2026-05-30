@@ -1,0 +1,33 @@
+API SECURITY ANALYSIS – /users Endpoint
+
+Endpoint Tested:
+https://jsonplaceholder.typicode.com/users
+
+Method:
+GET
+
+Risk Level:
+Medium
+
+Findings Identified:
+
+1. Open Public Endpoint
+The endpoint is accessible without authentication or API tokens.
+
+2. Excessive Data Exposure
+The API exposes multiple user details including email addresses, phone numbers, and company information.
+
+3. No Access Control
+Any user can access all user records without restrictions.
+
+4. Missing Rate Limiting Indicators
+No visible protections against excessive automated requests were identified.
+
+Business Impact:
+Public exposure of user information may increase privacy and data leakage risks.
+
+Remediation Suggestions:
+• Require authentication for sensitive endpoints
+• Limit exposed user data
+• Implement access control policies
+• Apply rate limiting protections

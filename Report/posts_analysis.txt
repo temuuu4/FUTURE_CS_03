@@ -1,0 +1,29 @@
+API SECURITY ANALYSIS – /posts Endpoint
+
+Endpoint Tested:
+https://jsonplaceholder.typicode.com/posts
+
+Method:
+GET
+
+Risk Level:
+Low
+
+Findings Identified:
+
+1. Public Data Access
+The endpoint allows unrestricted public access to post data.
+
+2. No Authentication Required
+Requests can be made without API keys or tokens.
+
+3. Minimal Sensitive Information
+The response does not expose critical personal information.
+
+Business Impact:
+Although low-risk, unrestricted access may still allow automated scraping or abuse.
+
+Remediation Suggestions:
+• Monitor API usage
+• Apply optional authentication
+• Use rate limiting for abuse prevention

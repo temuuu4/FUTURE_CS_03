@@ -1,0 +1,33 @@
+API SECURITY ANALYSIS – /comments Endpoint
+
+Endpoint Tested:
+https://jsonplaceholder.typicode.com/comments
+
+Method:
+GET
+
+Risk Level:
+Medium
+
+Findings Identified:
+
+1. Unauthenticated Access
+The endpoint can be accessed publicly without verification.
+
+2. Email Exposure
+User email addresses are visible in API responses.
+
+3. Potential Enumeration Risk
+Large amounts of comment data can be collected automatically.
+
+4. Missing Visible Request Restrictions
+No visible request throttling protections were identified.
+
+Business Impact:
+Exposed email information may contribute to spam, phishing, or data harvesting risks.
+
+Remediation Suggestions:
+• Reduce exposed personal information
+• Implement authentication where appropriate
+• Apply rate limiting controls
+• Restrict unnecessary data exposure
